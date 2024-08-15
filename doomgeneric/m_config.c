@@ -1753,10 +1753,10 @@ static void SetVariable(default_t *def, char *value)
             {
                 intparm = scantokey[intparm];
             }
-            else
-            {
-                intparm = 0;
-            }
+//            else
+//            {
+//                intparm = 0;
+//            }
 
             def->original_translated = intparm;
             * (int *) def->location = intparm;
@@ -1929,7 +1929,7 @@ void M_LoadDefaults (void)
     }
 
     LoadDefaultCollection(&doom_defaults);
-//    LoadDefaultCollection(&extra_defaults);
+    LoadDefaultCollection(&extra_defaults);
 }
 
 // Get a configuration file variable by its name
