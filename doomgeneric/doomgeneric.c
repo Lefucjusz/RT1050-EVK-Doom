@@ -32,5 +32,7 @@ void doomgeneric_Create(int argc, char **argv)
 
 void doomgeneric_Destroy(void)
 {
+	memset(DG_ScreenBuffer, 0, DISPLAY_BUFFER_SIZE);
+	display_refresh(DG_ScreenBuffer);
 	free(DG_ScreenBuffer);
 }

@@ -75,7 +75,7 @@ void _exit(int status)
 		}
 	}
 	_kill(status, -1);
-	NVIC_SystemReset();
+	while (1) {}
 }
 
 int _read(int file, char *ptr, int len)
